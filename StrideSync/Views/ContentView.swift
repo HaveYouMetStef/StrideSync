@@ -58,7 +58,7 @@ struct ContentView: View {
                     self.stepDataList.append(stepData)
                 }
             }
-        } 
+        }
         //MARK: Fake data if there is no physical device
         else {
             let endDate = Date()
@@ -81,9 +81,8 @@ struct ContentView: View {
                         Text("\(stepData.date, formatter: dateFormatter)")
                         Text("\(stepData.steps) Steps")
                     }
-                    
                 }
-                //title
+                //MARK: Must be on the NavigationView
                 .navigationBarTitle("StrideSync")
             }
 
