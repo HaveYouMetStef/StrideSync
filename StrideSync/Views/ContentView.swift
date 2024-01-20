@@ -11,11 +11,12 @@ import CoreMotion
 
 
 
-//Data Model - for tracking the steps for each day
+//MARK: Data Model - for tracking the steps for each day
 struct StepData:Identifiable, Hashable {
     var id = UUID()
     var date: Date
     var steps: Int
+    var distance: Double
 }
 
 struct ContentView: View {
@@ -29,6 +30,7 @@ struct ContentView: View {
         if CMPedometer.isPedometerEventTrackingAvailable() {
             let calendar = Calendar.current
             let endDate = Date()
+            let totalDistance = Double()
 
             // Include today's step data
             if let startOfDay = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: endDate),
@@ -36,7 +38,9 @@ struct ContentView: View {
                 stepTracker.queryPedometerData(from: startOfDay, to: endOfDay) { (data, error) in
                     guard let data = data, error == nil else { return }
                     let totalSteps = data.numberOfSteps.intValue
-                    let stepData = StepData(date: endDate, steps: totalSteps)
+                    let totalDistance = data.distance?.doubleValue ?? 0.0
+                    let distanceInMiles = Measurement(value: totalDistance, unit: UnitLength.meters).converted(to: .miles).value
+                    let stepData = StepData(date: endDate, steps: totalSteps, distance: distanceInMiles)
                     self.stepDataList.append(stepData)
                 }
             }
@@ -55,7 +59,9 @@ struct ContentView: View {
                 stepTracker.queryPedometerData(from: startOfDay, to: endOfDay) { (data, error) in
                     guard let data = data, error == nil else { return }
                     let totalSteps = data.numberOfSteps.intValue
-                    let stepData = StepData(date: startDate, steps: totalSteps)
+                    let totalDistance = data.distance?.doubleValue ?? 0.0
+                    let distanceInMiles = Measurement(value: totalDistance, unit: UnitLength.meters).converted(to: .miles).value
+                    let stepData = StepData(date: startDate, steps: totalSteps, distance: distanceInMiles)
                     self.stepDataList.append(stepData)
                 }
             }
@@ -67,7 +73,8 @@ struct ContentView: View {
             for i in 0..<7 {
                 let startdate = Calendar.current.date(byAdding: .day, value: -i, to: endDate)!
                 let fakeSteps = Int.random(in: 1000...10_000) //Random steps
-                let stepData = StepData(date: startdate, steps: fakeSteps)
+                let fakeDistanceWalked = Double.random(in: 1...100)
+                let stepData = StepData(date: startdate, steps: fakeSteps, distance: Double(fakeDistanceWalked))
                 self.stepDataList.append(stepData)
             }
         }
@@ -105,8 +112,9 @@ struct ContentView: View {
         
         var body: some View {
             VStack {
-                Text("Details for \(stepData.date, formatter: dateFormatter)")
+                Text("Date: \(stepData.date, formatter: dateFormatter)")
                 Text("\(stepData.steps) Steps")
+                Text("\(stepData.distance, specifier: "%.2f") Miles Walked")
             }
             .padding()
             .navigationTitle("Details")
