@@ -12,7 +12,8 @@ import CoreMotion
 
 
 //Data Model - for tracking the steps for each day
-struct StepData {
+struct StepData:Identifiable, Hashable {
+    var id = UUID()
     var date: Date
     var steps: Int
 }
@@ -77,30 +78,47 @@ struct ContentView: View {
         VStack {
             NavigationView {
                 List(stepDataList, id: \.date) { stepData in
-                    VStack(alignment: .leading) {
-                        Text("\(stepData.date, formatter: dateFormatter)")
-                        Text("\(stepData.steps) Steps")
+                    NavigationLink(destination: DayDetailsView(stepData: stepData), label: {
+                        VStack(alignment: .leading) {
+                            Text("\(stepData.date, formatter: dateFormatter)")
+                            Text("\(stepData.steps) Steps")
+                        }
                     }
+                    )
                 }
                 //MARK: Must be on the NavigationView
                 .navigationBarTitle("StrideSync")
+                
             }
-
+            .onAppear {
+                initializePedometer()
+                
+            }
         }
-        .onAppear {
-            initializePedometer()
-        
-    }
         .padding()
 }
     
+    //MARK: Day Details View (2nd screen)
     
-    //Date Formatter
-    private var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        return formatter
+    struct DayDetailsView: View {
+        var stepData: StepData
+        
+        var body: some View {
+            VStack {
+                Text("Details for \(stepData.date, formatter: dateFormatter)")
+                Text("\(stepData.steps) Steps")
+            }
+            .padding()
+            .navigationTitle("Details")
+        }
     }
+}
+
+//Date Formatter
+private var dateFormatter: DateFormatter {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .short
+    return formatter
 }
 
 #Preview {
