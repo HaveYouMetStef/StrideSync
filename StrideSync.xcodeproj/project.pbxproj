@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C524E5B2B5C5B660097AC23 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 9C524E5A2B5C5B660097AC23 /* SwiftUICharts */; };
 		9CC836D42B59A7F2004CD9A9 /* StrideSyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC836D32B59A7F2004CD9A9 /* StrideSyncApp.swift */; };
 		9CC836D62B59A7F2004CD9A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC836D52B59A7F2004CD9A9 /* ContentView.swift */; };
 		9CC836D82B59A7F6004CD9A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC836D72B59A7F6004CD9A9 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C524E5B2B5C5B660097AC23 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +95,9 @@
 			dependencies = (
 			);
 			name = StrideSync;
+			packageProductDependencies = (
+				9C524E5A2B5C5B660097AC23 /* SwiftUICharts */,
+			);
 			productName = StrideSync;
 			productReference = 9CC836D02B59A7F2004CD9A9 /* StrideSync.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 9CC836C72B59A7F2004CD9A9;
+			packageReferences = (
+				9C524E592B5C5B660097AC23 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 9CC836D12B59A7F2004CD9A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C524E592B5C5B660097AC23 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C524E5A2B5C5B660097AC23 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C524E592B5C5B660097AC23 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9CC836C82B59A7F2004CD9A9 /* Project object */;
 }

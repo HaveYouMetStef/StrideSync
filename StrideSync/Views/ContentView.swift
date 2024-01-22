@@ -8,7 +8,8 @@
 import SwiftUI
 //Must use the CoreMotion framework to get access to CMPedometer
 import CoreMotion
-
+import SwiftUICharts
+import Charts
 
 
 //MARK: Data Model - for tracking the steps for each day
@@ -72,7 +73,7 @@ struct ContentView: View {
             
             for i in 0..<7 {
                 let startdate = Calendar.current.date(byAdding: .day, value: -i, to: endDate)!
-                let fakeSteps = Int.random(in: 1000...10_000) //Random steps
+                let fakeSteps = Int.random(in: 0...10_000) //Random steps
                 let fakeDistanceWalked = Double.random(in: 1...100)
                 let stepData = StepData(date: startdate, steps: fakeSteps, distance: Double(fakeDistanceWalked))
                 self.stepDataList.append(stepData)
@@ -86,9 +87,15 @@ struct ContentView: View {
             NavigationView {
                 List(stepDataList, id: \.date) { stepData in
                     NavigationLink(destination: DayDetailsView(stepData: stepData), label: {
-                        VStack(alignment: .leading) {
-                            Text("\(stepData.date, formatter: dateFormatter)")
-                            Text("\(stepData.steps) Steps")
+                        HStack {
+                            VStack(alignment:.leading) {
+                                Text("\(stepData.date, formatter: dateFormatter)")
+                                Text("\(stepData.steps) Steps")
+                            }
+                            Spacer()
+                            
+                            Spacer()
+                            stepEmoji(for: stepData.steps)
                         }
                     }
                     )
@@ -103,7 +110,20 @@ struct ContentView: View {
             }
         }
         .padding()
-}
+    }
+    
+    //MARK: Emoji function
+    private func stepEmoji(for steps: Int) -> some View {
+        switch steps {
+        case 0..<1000:
+                return Text("🛑")
+        case 1000..<3999:
+                return Text("🟡")
+        default:
+            return Text("🟢")
+            
+        }
+    }
     
     //MARK: Day Details View (2nd screen)
     
@@ -111,16 +131,29 @@ struct ContentView: View {
         var stepData: StepData
         
         var body: some View {
-            VStack {
-                Text("Date: \(stepData.date, formatter: dateFormatter)")
-                Text("\(stepData.steps) Steps")
-                Text("\(stepData.distance, specifier: "%.2f") Miles Walked")
+            GeometryReader { geometry in
+                VStack {
+                    Text("\(stepData.steps) Steps")
+                        .font(.title)
+                    Text("\(stepData.distance, specifier: "%.2f") Miles Walked")
+                        .font(.headline)
+                    Spacer()
+                }
+                .navigationTitle("\(formattedDate(from: stepData.date))")
             }
             .padding()
-            .navigationTitle("Details")
+            
+        }
+        
+        private func formattedDate(from date: Date) -> String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "EEEE - M/d/yy"
+            return formatter.string(from: date)
         }
     }
 }
+
+
 
 //Date Formatter
 private var dateFormatter: DateFormatter {
@@ -128,6 +161,16 @@ private var dateFormatter: DateFormatter {
     formatter.dateStyle = .short
     return formatter
 }
+
+//Charts extension
+extension StepData {
+    // Convert steps data to ChartData
+    func stepsData() -> [Int] {
+        // For simplicity, assuming stepsData is an array of Double
+        return [Int(steps)]
+    }
+}
+
 
 #Preview {
     ContentView()
