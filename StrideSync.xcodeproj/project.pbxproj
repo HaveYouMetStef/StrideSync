@@ -14,6 +14,9 @@
 		9C524E6E2B5F7A810097AC23 /* DayDetailsViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C524E6D2B5F7A810097AC23 /* DayDetailsViewTest.swift */; };
 		9C524E782B5F81D60097AC23 /* StrideSyncUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C524E772B5F81D60097AC23 /* StrideSyncUITests.swift */; };
 		9C524E7A2B5F81D60097AC23 /* StrideSyncUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C524E792B5F81D60097AC23 /* StrideSyncUITestsLaunchTests.swift */; };
+		9CB408EE2B601CEC003AED26 /* StepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB408ED2B601CEC003AED26 /* StepData.swift */; };
+		9CB408F12B6032F6003AED26 /* StepTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB408F02B6032F6003AED26 /* StepTrackerViewModel.swift */; };
+		9CB408F42B603837003AED26 /* DayDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB408F32B603837003AED26 /* DayDetailsView.swift */; };
 		9CC836D42B59A7F2004CD9A9 /* StrideSyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC836D32B59A7F2004CD9A9 /* StrideSyncApp.swift */; };
 		9CC836D62B59A7F2004CD9A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC836D52B59A7F2004CD9A9 /* ContentView.swift */; };
 		9CC836D82B59A7F6004CD9A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC836D72B59A7F6004CD9A9 /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 		9C524E752B5F81D60097AC23 /* StrideSyncUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrideSyncUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C524E772B5F81D60097AC23 /* StrideSyncUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrideSyncUITests.swift; sourceTree = "<group>"; };
 		9C524E792B5F81D60097AC23 /* StrideSyncUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrideSyncUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9CB408ED2B601CEC003AED26 /* StepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepData.swift; sourceTree = "<group>"; };
+		9CB408F02B6032F6003AED26 /* StepTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTrackerViewModel.swift; sourceTree = "<group>"; };
+		9CB408F32B603837003AED26 /* DayDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailsView.swift; sourceTree = "<group>"; };
 		9CC836D02B59A7F2004CD9A9 /* StrideSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrideSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC836D32B59A7F2004CD9A9 /* StrideSyncApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrideSyncApp.swift; sourceTree = "<group>"; };
 		9CC836D52B59A7F2004CD9A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +106,22 @@
 			path = StrideSyncUITests;
 			sourceTree = "<group>";
 		};
+		9CB408EF2B601D28003AED26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CB408ED2B601CEC003AED26 /* StepData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9CB408F22B603302003AED26 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9CB408F02B6032F6003AED26 /* StepTrackerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9CC836C72B59A7F2004CD9A9 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +149,8 @@
 				9CFA70872B5A0D75002C6D01 /* Views */,
 				9CC836D72B59A7F6004CD9A9 /* Assets.xcassets */,
 				9CC836D92B59A7F6004CD9A9 /* Preview Content */,
+				9CB408EF2B601D28003AED26 /* Model */,
+				9CB408F22B603302003AED26 /* ViewModel */,
 			);
 			path = StrideSync;
 			sourceTree = "<group>";
@@ -144,6 +168,7 @@
 			children = (
 				9CC836D32B59A7F2004CD9A9 /* StrideSyncApp.swift */,
 				9CC836D52B59A7F2004CD9A9 /* ContentView.swift */,
+				9CB408F32B603837003AED26 /* DayDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +330,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CC836D62B59A7F2004CD9A9 /* ContentView.swift in Sources */,
+				9CB408F12B6032F6003AED26 /* StepTrackerViewModel.swift in Sources */,
+				9CB408F42B603837003AED26 /* DayDetailsView.swift in Sources */,
+				9CB408EE2B601CEC003AED26 /* StepData.swift in Sources */,
 				9CC836D42B59A7F2004CD9A9 /* StrideSyncApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

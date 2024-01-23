@@ -11,7 +11,8 @@ import XCTest
 final class FormattedDateTest: XCTestCase {
 
     func testFormattedDate() {
-            let dayDetailsView = ContentView.DayDetailsView(stepData: StepData(date: Date(), steps: 0, distance: 0.0))
+        let viewModel = StepTrackerViewModel()
+        let dayDetailsView = DayDetailsView(stepData: StepData(date: Date(), steps: 0, distance: 0.0), viewModel: viewModel)
 
             // Choose a specific date for testing
             let testDate = Date(timeIntervalSince1970: 1697788800)
