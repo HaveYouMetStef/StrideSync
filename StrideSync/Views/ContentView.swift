@@ -8,8 +8,6 @@
 import SwiftUI
 //Must use the CoreMotion framework to get access to CMPedometer
 import CoreMotion
-import SwiftUICharts
-import Charts
 
 
 //MARK: Data Model - for tracking the steps for each day
@@ -113,7 +111,7 @@ struct ContentView: View {
     }
     
     //MARK: Emoji function
-    private func stepEmoji(for steps: Int) -> some View {
+     func stepEmoji(for steps: Int) -> some View {
         switch steps {
         case 0..<1000:
                 return Text("🛑")
@@ -142,10 +140,11 @@ struct ContentView: View {
                 .navigationTitle("\(formattedDate(from: stepData.date))")
             }
             .padding()
+            .accessibility(identifier: "DayDetailsView")
             
         }
         
-        private func formattedDate(from date: Date) -> String {
+         func formattedDate(from date: Date) -> String {
             let formatter = DateFormatter()
             formatter.dateFormat = "EEEE - M/d/yy"
             return formatter.string(from: date)

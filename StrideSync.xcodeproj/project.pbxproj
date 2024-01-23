@@ -8,13 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		9C524E5B2B5C5B660097AC23 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 9C524E5A2B5C5B660097AC23 /* SwiftUICharts */; };
+		9C524E632B5F66770097AC23 /* StrideSyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C524E622B5F66770097AC23 /* StrideSyncTests.swift */; };
+		9C524E6A2B5F6FFD0097AC23 /* EmojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C524E692B5F6FFD0097AC23 /* EmojiTests.swift */; };
+		9C524E6C2B5F72FC0097AC23 /* FormattedDateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C524E6B2B5F72FC0097AC23 /* FormattedDateTest.swift */; };
+		9C524E6E2B5F7A810097AC23 /* DayDetailsViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C524E6D2B5F7A810097AC23 /* DayDetailsViewTest.swift */; };
+		9C524E782B5F81D60097AC23 /* StrideSyncUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C524E772B5F81D60097AC23 /* StrideSyncUITests.swift */; };
+		9C524E7A2B5F81D60097AC23 /* StrideSyncUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C524E792B5F81D60097AC23 /* StrideSyncUITestsLaunchTests.swift */; };
 		9CC836D42B59A7F2004CD9A9 /* StrideSyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC836D32B59A7F2004CD9A9 /* StrideSyncApp.swift */; };
 		9CC836D62B59A7F2004CD9A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC836D52B59A7F2004CD9A9 /* ContentView.swift */; };
 		9CC836D82B59A7F6004CD9A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC836D72B59A7F6004CD9A9 /* Assets.xcassets */; };
 		9CC836DB2B59A7F6004CD9A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC836DA2B59A7F6004CD9A9 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9C524E642B5F66780097AC23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CC836C82B59A7F2004CD9A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CC836CF2B59A7F2004CD9A9;
+			remoteInfo = StrideSync;
+		};
+		9C524E7B2B5F81D60097AC23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CC836C82B59A7F2004CD9A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CC836CF2B59A7F2004CD9A9;
+			remoteInfo = StrideSync;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		9C524E602B5F66770097AC23 /* StrideSyncTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrideSyncTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C524E622B5F66770097AC23 /* StrideSyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrideSyncTests.swift; sourceTree = "<group>"; };
+		9C524E692B5F6FFD0097AC23 /* EmojiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTests.swift; sourceTree = "<group>"; };
+		9C524E6B2B5F72FC0097AC23 /* FormattedDateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedDateTest.swift; sourceTree = "<group>"; };
+		9C524E6D2B5F7A810097AC23 /* DayDetailsViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailsViewTest.swift; sourceTree = "<group>"; };
+		9C524E752B5F81D60097AC23 /* StrideSyncUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrideSyncUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C524E772B5F81D60097AC23 /* StrideSyncUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrideSyncUITests.swift; sourceTree = "<group>"; };
+		9C524E792B5F81D60097AC23 /* StrideSyncUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrideSyncUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9CC836D02B59A7F2004CD9A9 /* StrideSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrideSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC836D32B59A7F2004CD9A9 /* StrideSyncApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrideSyncApp.swift; sourceTree = "<group>"; };
 		9CC836D52B59A7F2004CD9A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +55,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9C524E5D2B5F66770097AC23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C524E722B5F81D60097AC23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CC836CD2B59A7F2004CD9A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +80,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C524E612B5F66770097AC23 /* StrideSyncTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C524E622B5F66770097AC23 /* StrideSyncTests.swift */,
+				9C524E692B5F6FFD0097AC23 /* EmojiTests.swift */,
+				9C524E6B2B5F72FC0097AC23 /* FormattedDateTest.swift */,
+				9C524E6D2B5F7A810097AC23 /* DayDetailsViewTest.swift */,
+			);
+			path = StrideSyncTests;
+			sourceTree = "<group>";
+		};
+		9C524E762B5F81D60097AC23 /* StrideSyncUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C524E772B5F81D60097AC23 /* StrideSyncUITests.swift */,
+				9C524E792B5F81D60097AC23 /* StrideSyncUITestsLaunchTests.swift */,
+			);
+			path = StrideSyncUITests;
+			sourceTree = "<group>";
+		};
 		9CC836C72B59A7F2004CD9A9 = {
 			isa = PBXGroup;
 			children = (
 				9CC836D22B59A7F2004CD9A9 /* StrideSync */,
+				9C524E612B5F66770097AC23 /* StrideSyncTests */,
+				9C524E762B5F81D60097AC23 /* StrideSyncUITests */,
 				9CC836D12B59A7F2004CD9A9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				9CC836D02B59A7F2004CD9A9 /* StrideSync.app */,
+				9C524E602B5F66770097AC23 /* StrideSyncTests.xctest */,
+				9C524E752B5F81D60097AC23 /* StrideSyncUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +151,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9C524E5F2B5F66770097AC23 /* StrideSyncTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C524E662B5F66780097AC23 /* Build configuration list for PBXNativeTarget "StrideSyncTests" */;
+			buildPhases = (
+				9C524E5C2B5F66770097AC23 /* Sources */,
+				9C524E5D2B5F66770097AC23 /* Frameworks */,
+				9C524E5E2B5F66770097AC23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C524E652B5F66780097AC23 /* PBXTargetDependency */,
+			);
+			name = StrideSyncTests;
+			productName = StrideSyncTests;
+			productReference = 9C524E602B5F66770097AC23 /* StrideSyncTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C524E742B5F81D60097AC23 /* StrideSyncUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C524E7D2B5F81D60097AC23 /* Build configuration list for PBXNativeTarget "StrideSyncUITests" */;
+			buildPhases = (
+				9C524E712B5F81D60097AC23 /* Sources */,
+				9C524E722B5F81D60097AC23 /* Frameworks */,
+				9C524E732B5F81D60097AC23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C524E7C2B5F81D60097AC23 /* PBXTargetDependency */,
+			);
+			name = StrideSyncUITests;
+			productName = StrideSyncUITests;
+			productReference = 9C524E752B5F81D60097AC23 /* StrideSyncUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		9CC836CF2B59A7F2004CD9A9 /* StrideSync */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CC836DE2B59A7F6004CD9A9 /* Build configuration list for PBXNativeTarget "StrideSync" */;
@@ -112,6 +217,14 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					9C524E5F2B5F66770097AC23 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 9CC836CF2B59A7F2004CD9A9;
+					};
+					9C524E742B5F81D60097AC23 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 9CC836CF2B59A7F2004CD9A9;
+					};
 					9CC836CF2B59A7F2004CD9A9 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -134,11 +247,27 @@
 			projectRoot = "";
 			targets = (
 				9CC836CF2B59A7F2004CD9A9 /* StrideSync */,
+				9C524E5F2B5F66770097AC23 /* StrideSyncTests */,
+				9C524E742B5F81D60097AC23 /* StrideSyncUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9C524E5E2B5F66770097AC23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C524E732B5F81D60097AC23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CC836CE2B59A7F2004CD9A9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,6 +280,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9C524E5C2B5F66770097AC23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C524E6A2B5F6FFD0097AC23 /* EmojiTests.swift in Sources */,
+				9C524E632B5F66770097AC23 /* StrideSyncTests.swift in Sources */,
+				9C524E6E2B5F7A810097AC23 /* DayDetailsViewTest.swift in Sources */,
+				9C524E6C2B5F72FC0097AC23 /* FormattedDateTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C524E712B5F81D60097AC23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C524E7A2B5F81D60097AC23 /* StrideSyncUITestsLaunchTests.swift in Sources */,
+				9C524E782B5F81D60097AC23 /* StrideSyncUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CC836CC2B59A7F2004CD9A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,7 +311,90 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9C524E652B5F66780097AC23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CC836CF2B59A7F2004CD9A9 /* StrideSync */;
+			targetProxy = 9C524E642B5F66780097AC23 /* PBXContainerItemProxy */;
+		};
+		9C524E7C2B5F81D60097AC23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CC836CF2B59A7F2004CD9A9 /* StrideSync */;
+			targetProxy = 9C524E7B2B5F81D60097AC23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		9C524E672B5F66780097AC23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GBG5422KCQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HYMS.StrideSyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StrideSync.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StrideSync";
+			};
+			name = Debug;
+		};
+		9C524E682B5F66780097AC23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GBG5422KCQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HYMS.StrideSyncTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StrideSync.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StrideSync";
+			};
+			name = Release;
+		};
+		9C524E7E2B5F81D60097AC23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GBG5422KCQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HYMS.StrideSyncUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StrideSync;
+			};
+			name = Debug;
+		};
+		9C524E7F2B5F81D60097AC23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GBG5422KCQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HYMS.StrideSyncUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StrideSync;
+			};
+			name = Release;
+		};
 		9CC836DC2B59A7F6004CD9A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -349,6 +581,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9C524E662B5F66780097AC23 /* Build configuration list for PBXNativeTarget "StrideSyncTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C524E672B5F66780097AC23 /* Debug */,
+				9C524E682B5F66780097AC23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C524E7D2B5F81D60097AC23 /* Build configuration list for PBXNativeTarget "StrideSyncUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C524E7E2B5F81D60097AC23 /* Debug */,
+				9C524E7F2B5F81D60097AC23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9CC836CB2B59A7F2004CD9A9 /* Build configuration list for PBXProject "StrideSync" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
