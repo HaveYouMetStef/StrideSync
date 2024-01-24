@@ -24,30 +24,37 @@ struct ContentView: View {
                 List(viewModel.stepDataList, id: \.id) { stepData in
                     NavigationLink(destination: DayDetailsView(stepData: stepData, viewModel: viewModel)) {
                         HStack {
-                            VStack(alignment:.leading) {
+                            VStack(alignment:.leading, spacing: 8) {
                                 Text("\(stepData.date, formatter: dateFormatter)")
+                                    .font(.headline)
                                 Text("\(stepData.steps) Steps")
+                                    .font(.subheadline)
                             }
                             Spacer()
                             Spacer()
                             Text(stepEmoji(for:stepData.steps))
+                                .font(.system(size: 24))
                         }
-                    }
-                    .highPriorityGesture(DragGesture(minimumDistance: 10, coordinateSpace: .local) //Back geture - allows you to swipe back to the previous screen
-                        .onChanged{value in
-                            guard value.startLocation.x <= 40 else {
-                                return
+                        .padding(9)
+                        .cornerRadius(10)
+
+                        .highPriorityGesture(DragGesture(minimumDistance: 10, coordinateSpace: .local) //Back geture - allows you to swipe back to the previous screen
+                            .onChanged{value in
+                                guard value.startLocation.x <= 40 else {
+                                    return
+                                }
+                                dismiss()
                             }
-                            dismiss()
-                        }
-                    )
-                    
+                        )
+                    }
+                    .buttonStyle(PlainButtonStyle())
                 }
 
                 //MARK: Must be on the NavigationView
                 .navigationBarTitle("StrideSync")
+                .padding()
             }
-            .padding()
+
         }
     }
     
