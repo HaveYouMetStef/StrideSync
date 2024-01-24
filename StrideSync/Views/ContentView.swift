@@ -13,28 +13,39 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject private var viewModel = StepTrackerViewModel()
-
+    
+    @Environment (\.dismiss) var dismiss
+    
     
     //MARK: UI of Main Screen
     var body: some View {
         VStack {
             NavigationView {
                 List(viewModel.stepDataList, id: \.id) { stepData in
-                        NavigationLink(destination: DayDetailsView(stepData: stepData, viewModel: viewModel)) {
-                            HStack {
-                                VStack(alignment:.leading) {
-                                    Text("\(stepData.date, formatter: dateFormatter)")
-                                    Text("\(stepData.steps) Steps")
-                                }
-                                Spacer()
-                                Spacer()
-                                Text(stepEmoji(for:stepData.steps))
+                    NavigationLink(destination: DayDetailsView(stepData: stepData, viewModel: viewModel)) {
+                        HStack {
+                            VStack(alignment:.leading) {
+                                Text("\(stepData.date, formatter: dateFormatter)")
+                                Text("\(stepData.steps) Steps")
                             }
+                            Spacer()
+                            Spacer()
+                            Text(stepEmoji(for:stepData.steps))
                         }
+                    }
+                    .highPriorityGesture(DragGesture(minimumDistance: 10, coordinateSpace: .local) //Back geture - allows you to swipe back to the previous screen
+                        .onChanged{value in
+                            guard value.startLocation.x <= 40 else {
+                                return
+                            }
+                            dismiss()
+                        }
+                    )
+                    
                 }
+
                 //MARK: Must be on the NavigationView
                 .navigationBarTitle("StrideSync")
-                
             }
             .padding()
         }
