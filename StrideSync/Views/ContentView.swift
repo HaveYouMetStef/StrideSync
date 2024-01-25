@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-
-
-
 struct ContentView: View {
     
     @StateObject private var viewModel = StepTrackerViewModel()
@@ -49,14 +46,12 @@ struct ContentView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                 }
-
                 //MARK: Must be on the NavigationView
                 .navigationBarTitle("StrideSync")
-                .padding()
             }
-
         }
     }
+    
     
     //MARK: Emoji function
     func stepEmoji(for steps: Int) -> String {

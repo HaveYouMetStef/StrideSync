@@ -9,6 +9,7 @@ import XCTest
 @testable import StrideSync
 import CoreMotion
 
+
 final class StrideSyncTests: XCTestCase {
     
     // CMPedometer test
@@ -27,7 +28,7 @@ final class StrideSyncTests: XCTestCase {
         }
     
     func testStepTrackerViewModel() {
-            // Arrange
+            // MARK: Arrange
             let viewModel = StepTrackerViewModel()
             MockPedometer.isPedometerAvailable = true
             
@@ -38,11 +39,11 @@ final class StrideSyncTests: XCTestCase {
                 handler(simulatedData, nil)
             }
             
-            // Act
+            // MARK: Act
             viewModel.initializePedometer()
             
-            // Assert
-        XCTAssertEqual(viewModel.stepDataList.isEmpty, true) // Adjust based on your expected behavior
+            //MARK: Assert
+        XCTAssertEqual(viewModel.stepDataList.isEmpty, true)
         }
     
 }

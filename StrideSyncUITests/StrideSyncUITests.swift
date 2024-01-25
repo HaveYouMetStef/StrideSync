@@ -14,7 +14,7 @@ final class StrideSyncUITests: XCTestCase {
             app.launch()
             
             let firstCell = app.firstMatch.otherElements.cells.firstMatch
-            firstCell.tap() //test tha
+            firstCell.tap() //Test that it will tap the first cell
             
 
             app.navigationBars.buttons.element(boundBy: 0).tap() //Test the back button
